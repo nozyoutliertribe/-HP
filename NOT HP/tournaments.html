@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NOT TCの大会情報。開催予定や参加案内、大会結果をお知らせします。">
+  <title>NOT TC｜大会情報</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-view-mode="auto">
+  <header class="header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html#top">
+        <img src="not-tc-logo.jpg" alt="">
+        <span>NOT TC</span>
+      </a>
+      <nav class="nav" aria-label="メインナビゲーション">
+        <a href="index.html#top">HOME</a>
+        <a href="schedule.html#schedule">活動案内・料金</a>
+        <a href="tournaments.html#tournaments">大会情報</a>
+        <a href="news.html#news">お知らせ</a>
+        <a href="calendar.html#calendar">カレンダー</a>
+        <a href="faq.html#faq">Q&A</a>
+        <a href="join.html#join">体験・相談</a>
+        <a href="access.html#access">アクセス</a>
+      </nav>
+      <div class="view-switch" role="group" aria-label="サイト表示切替" hidden>
+        <button type="button" data-view-mode="auto" aria-pressed="true">自動</button>
+        <button type="button" data-view-mode="desktop" aria-pressed="false">PC表示</button>
+        <button type="button" data-view-mode="mobile" aria-pressed="false">スマホ表示</button>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section id="tournaments">
+      <div class="container">
+        <p class="eyebrow">TOURNAMENTS</p>
+        <h1 class="section-heading">大会情報</h1>
+        <p class="section-lead">大会の開催予定や参加案内、大会結果を掲載します。</p>
+        <div class="card-grid">
+          <article class="card">
+            <h2>開催予定・参加案内</h2>
+            <p>大会の開催が決まり次第、日程や参加方法などをこちらでご案内します。</p>
+          </article>
+          <article class="card">
+            <h2>大会結果</h2>
+            <p>大会の結果や活動の様子を、掲載できる情報がまとまり次第お知らせします。</p>
+          </article>
+        </div>
+        <p class="weather-note">日程については<a href="calendar.html#calendar">レッスンカレンダー</a>もご確認ください。大会に関するお問い合わせは<a href="join.html#join">体験・相談フォーム</a>からお送りいただけます。</p>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 NOT TC</p>
+    </div>
+  </footer>
+  <script>
+    const viewSwitch = document.querySelector(".view-switch");
+    const viewButtons = viewSwitch.querySelectorAll("button");
+
+    viewSwitch.hidden = false;
+    viewButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        document.body.dataset.viewMode = button.dataset.viewMode;
+        viewButtons.forEach((item) => {
+          item.setAttribute("aria-pressed", String(item === button));
+        });
+      });
+    });
+  </script>
+</body>
+</html>

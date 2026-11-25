@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NOT TCはジュニア向け硬式テニスチームです。地域最大級の屋外練習環境で、テニスを通じて地域を活性化します。">
+  <title>NOT TC｜Q&A</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-view-mode="auto">
+  <header class="header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html#top">
+        <img src="not-tc-logo.jpg" alt="">
+        <span>NOT TC</span>
+      </a>
+      <nav class="nav" aria-label="メインナビゲーション">
+        <a href="index.html#top">HOME</a>
+        <a href="schedule.html#schedule">活動案内・料金</a>
+        <a href="tournaments.html#tournaments">大会情報</a>
+        <a href="news.html#news">お知らせ</a>
+        <a href="calendar.html#calendar">カレンダー</a>
+        <a href="faq.html#faq">Q&A</a>
+        <a href="join.html#join">体験・相談</a>
+        <a href="access.html#access">アクセス</a>
+      </nav>
+      <div class="view-switch" role="group" aria-label="サイト表示切替" hidden>
+        <button type="button" data-view-mode="auto" aria-pressed="true">自動</button>
+        <button type="button" data-view-mode="desktop" aria-pressed="false">PC表示</button>
+        <button type="button" data-view-mode="mobile" aria-pressed="false">スマホ表示</button>
+      </div>
+    </div>
+  </header>
+  <main>
+<section class="faq" id="faq">
+      <div class="container">
+        <p class="eyebrow">FAQ</p>
+        <h2 class="section-heading">Q&A</h2>
+        <p class="section-lead">ジュニアチームへの参加や、レンタルコートについての質問をまとめました。</p>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>初心者でも参加できますか？</summary>
+            <p>はい。初心者の方も参加できます。クラスの選び方など、<a href="join.html#join">体験・相談フォーム</a>からお気軽にご相談ください。</p>
+          </details>
+          <details class="faq-item">
+            <summary>体験レッスンはできますか？</summary>
+            <p>体験レッスンは1週間無料です。同一の方の2回目以降のお申し込みはビジター扱いとなり、各クラスのビジター料金が適用されます。<a href="join.html?topic=trial#join">体験・相談フォーム</a>で第1希望日時を入力してお申し込みください。</p>
+          </details>
+          <details class="faq-item">
+            <summary>参加するときの持ち物は何ですか？</summary>
+            <p>運動できる服装、テニスシューズ、ラケット、飲み物をご用意ください。</p>
+          </details>
+          <details class="faq-item">
+            <summary>ラケットを持っていない場合はどうすればよいですか？</summary>
+            <p>貸し出しの可否を事前に確認します。<a href="join.html#join">体験・相談フォーム</a>からお問い合わせください。</p>
+          </details>
+          <details class="faq-item">
+            <summary>レンタルコートの予約は、フォームを送信すれば確定しますか？</summary>
+            <p>送信時点では予約確定ではありません。コートの空き状況を確認後、改めてご連絡します。<a href="join.html?topic=rental#join">予約・空き状況の問い合わせはこちら</a>。</p>
+          </details>
+          <details class="faq-item">
+            <summary>レンタルコートは何時から何時まで利用できますか？</summary>
+            <p>料金表に記載の利用時間は6:00〜16:00です。時間帯や曜日によって料金が異なります。詳しくは<a href="schedule.html#pricing">活動案内・料金ページ</a>をご確認ください。</p>
+          </details>
+          <details class="faq-item">
+            <summary>雨の日もレンタルコートを利用できますか？</summary>
+            <p>レンタルコートは雨天中止です。</p>
+          </details>
+          <details class="faq-item">
+            <summary>テニス以外のコートも借りられますか？</summary>
+            <p>ピックルボールでもご利用いただけます。空き状況や利用方法は、<a href="join.html?topic=rental#join">問い合わせフォーム</a>からご確認ください。</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 NOT TC</p>
+    </div>
+  </footer>
+  <script>
+    const viewSwitch = document.querySelector(".view-switch");
+    const viewButtons = viewSwitch.querySelectorAll("button");
+
+    viewSwitch.hidden = false;
+    viewButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        document.body.dataset.viewMode = button.dataset.viewMode;
+        viewButtons.forEach((item) => {
+          item.setAttribute("aria-pressed", String(item === button));
+        });
+      });
+    });
+  </script>
+</body>
+</html>
+
+
