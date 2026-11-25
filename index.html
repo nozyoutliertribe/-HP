@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NOT TCは硬式ジュニアテニスチームです。地域最大級の屋外練習環境で活動し、テニス・ピックルボールのレンタルコートもご利用いただけます。">
+  <title>NOT TC｜テニスで地域を活性化！！</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-view-mode="auto">
+  <header class="header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html#top">
+        <img src="not-tc-logo.jpg" alt="">
+        <span>NOT TC</span>
+      </a>
+      <nav class="nav" aria-label="メインナビゲーション">
+        <a href="index.html#top">HOME</a>
+        <a href="schedule.html#schedule">活動案内・料金</a>
+        <a href="tournaments.html#tournaments">大会情報</a>
+        <a href="news.html#news">お知らせ</a>
+        <a href="calendar.html#calendar">カレンダー</a>
+        <a href="faq.html#faq">Q&A</a>
+        <a href="join.html#join">体験・相談</a>
+        <a href="access.html#access">アクセス</a>
+      </nav>
+      <div class="view-switch" role="group" aria-label="サイト表示切替" hidden>
+        <button type="button" data-view-mode="auto" aria-pressed="true">自動</button>
+        <button type="button" data-view-mode="desktop" aria-pressed="false">PC表示</button>
+        <button type="button" data-view-mode="mobile" aria-pressed="false">スマホ表示</button>
+      </div>
+    </div>
+  </header>
+  <main>
+<section class="hero" id="top">
+      <div class="container hero-content">
+        <p class="eyebrow">硬式ジュニアテニスチーム｜NOT TENNIS CLUB<br>レンタルコートあり（テニス・ピックルボール）</p>
+        <h1>テニスで地域を<br>活性化！！</h1>
+        <p class="hero-copy">ジュニアがのびのび硬式テニスに打ち込める、地域最大級の屋外練習環境がNOT TCの魅力です。テニス・ピックルボールのレンタルコートもご利用いただけます。<br>体験レッスンは1週間無料。同一の方の2回目以降はビジター料金です。</p>
+        <a class="button" href="join.html?topic=trial#join">1週間無料体験に申し込む</a>
+      </div>
+    </section>
+
+<section id="about">
+      <div class="container about-grid">
+        <div>
+          <p class="eyebrow">ABOUT US</p>
+          <h2 class="section-heading">テニスで地域を元気に。</h2>
+          <p class="section-lead">NOT TCは硬式ジュニアテニスチームです。テニスを通じた地域の活性化を目指しています。</p>
+          <p>広々とした屋外コートで、ジュニアが周りを気にせずのびのび練習できる環境です。競技レベルに合わせたクラスで、それぞれの目標を応援します。</p>
+        </div>
+        <aside class="about-note">
+          <strong>地域最大級の練習環境</strong>
+          <div class="court-count">屋外コート 6面</div>
+          <p>ジュニアがのびのびテニスに取り組める、広々とした環境を整えています。</p>
+          <p>ファン・トーナメント・アスリートの3クラスを開講中です。</p>
+        </aside>
+      </div>
+    </section>
+    <section class="activities" id="updates">
+      <div class="container">
+        <p class="eyebrow">UPDATES</p>
+        <h2 class="section-heading">大会情報・お知らせ</h2>
+        <p class="section-lead">大会やイベントの情報、体験・レンタルコートのご案内はこちらから。</p>
+        <div class="card-grid">
+          <article class="card">
+            <h3>大会情報</h3>
+            <p>大会の開催予定や結果を掲載します。</p>
+            <p><a href="tournaments.html#tournaments">大会情報を見る</a></p>
+          </article>
+          <article class="card">
+            <h3>お知らせ</h3>
+            <p>体験レッスン、レンタルコート、イベントについてご案内します。</p>
+            <p><a href="news.html#news">お知らせを見る</a></p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 NOT TC</p>
+    </div>
+  </footer>
+  <script>
+    const viewSwitch = document.querySelector(".view-switch");
+    const viewButtons = viewSwitch.querySelectorAll("button");
+
+    viewSwitch.hidden = false;
+    viewButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        document.body.dataset.viewMode = button.dataset.viewMode;
+        viewButtons.forEach((item) => {
+          item.setAttribute("aria-pressed", String(item === button));
+        });
+      });
+    });
+  </script>
+</body>
+</html>
+
+

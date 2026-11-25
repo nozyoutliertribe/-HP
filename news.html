@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NOT TCからのお知らせ。ジュニアチームの体験レッスンやレンタルコート、イベントについてご案内します。">
+  <title>NOT TC｜お知らせ</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-view-mode="auto">
+  <header class="header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html#top">
+        <img src="not-tc-logo.jpg" alt="">
+        <span>NOT TC</span>
+      </a>
+      <nav class="nav" aria-label="メインナビゲーション">
+        <a href="index.html#top">HOME</a>
+        <a href="schedule.html#schedule">活動案内・料金</a>
+        <a href="tournaments.html#tournaments">大会情報</a>
+        <a href="news.html#news">お知らせ</a>
+        <a href="calendar.html#calendar">カレンダー</a>
+        <a href="faq.html#faq">Q&A</a>
+        <a href="join.html#join">体験・相談</a>
+        <a href="access.html#access">アクセス</a>
+      </nav>
+      <div class="view-switch" role="group" aria-label="サイト表示切替" hidden>
+        <button type="button" data-view-mode="auto" aria-pressed="true">自動</button>
+        <button type="button" data-view-mode="desktop" aria-pressed="false">PC表示</button>
+        <button type="button" data-view-mode="mobile" aria-pressed="false">スマホ表示</button>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section id="news">
+      <div class="container">
+        <p class="eyebrow">NEWS</p>
+        <h1 class="section-heading">お知らせ</h1>
+        <p class="section-lead">体験レッスンやレンタルコート、イベントについてのご案内です。</p>
+        <div class="card-grid">
+          <article class="card">
+            <h2>体験レッスンは1週間無料</h2>
+            <p>同一の方の2回目以降のお申し込みはビジター扱いとなり、各クラスのビジター料金が適用されます。希望日時を入力してフォームからお申し込みください。</p>
+            <p><a href="join.html?topic=trial#join">体験を申し込む</a></p>
+          </article>
+          <article class="card">
+            <h2>レンタルコートをご利用いただけます</h2>
+            <p>テニス・ピックルボールのコートをレンタルできます。利用時間や料金、空き状況の確認方法をご案内しています。</p>
+            <p><a href="schedule.html#pricing">レンタル料金を見る</a> ／ <a href="join.html?topic=rental#join">空き状況を問い合わせる</a></p>
+          </article>
+          <article class="card">
+            <h2>レッスン・イベント日程</h2>
+            <p>開催日やイベント予定は、レッスンカレンダーをご確認ください。</p>
+            <p><a href="calendar.html#calendar">カレンダーを見る</a></p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 NOT TC</p>
+    </div>
+  </footer>
+  <script>
+    const viewSwitch = document.querySelector(".view-switch");
+    const viewButtons = viewSwitch.querySelectorAll("button");
+
+    viewSwitch.hidden = false;
+    viewButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        document.body.dataset.viewMode = button.dataset.viewMode;
+        viewButtons.forEach((item) => {
+          item.setAttribute("aria-pressed", String(item === button));
+        });
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NOT TCはジュニア向け硬式テニスチームです。地域最大級の屋外練習環境で、テニスを通じて地域を活性化します。">
+  <title>NOT TC｜カレンダー</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-view-mode="auto">
+  <header class="header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html#top">
+        <img src="not-tc-logo.jpg" alt="">
+        <span>NOT TC</span>
+      </a>
+      <nav class="nav" aria-label="メインナビゲーション">
+        <a href="index.html#top">HOME</a>
+        <a href="schedule.html#schedule">活動案内・料金</a>
+        <a href="tournaments.html#tournaments">大会情報</a>
+        <a href="news.html#news">お知らせ</a>
+        <a href="calendar.html#calendar">カレンダー</a>
+        <a href="faq.html#faq">Q&A</a>
+        <a href="join.html#join">体験・相談</a>
+        <a href="access.html#access">アクセス</a>
+      </nav>
+      <div class="view-switch" role="group" aria-label="サイト表示切替" hidden>
+        <button type="button" data-view-mode="auto" aria-pressed="true">自動</button>
+        <button type="button" data-view-mode="desktop" aria-pressed="false">PC表示</button>
+        <button type="button" data-view-mode="mobile" aria-pressed="false">スマホ表示</button>
+      </div>
+    </div>
+  </header>
+  <main>
+<section id="calendar">
+      <div class="container">
+        <p class="eyebrow">CALENDAR</p>
+        <h2 class="section-heading">レッスンカレンダー</h2>
+        <p class="section-lead">開催日やイベント予定はこちらからご確認ください。</p>
+        <iframe
+          class="calendar-frame"
+          src="https://calendar.google.com/calendar/embed?src=informationozy%40gmail.com&amp;ctz=Asia%2FTokyo"
+          title="NOT TC Google カレンダー"
+          loading="lazy"
+          scrolling="no">
+        </iframe>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 NOT TC</p>
+    </div>
+  </footer>
+  <script>
+    const viewSwitch = document.querySelector(".view-switch");
+    const viewButtons = viewSwitch.querySelectorAll("button");
+
+    viewSwitch.hidden = false;
+    viewButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        document.body.dataset.viewMode = button.dataset.viewMode;
+        viewButtons.forEach((item) => {
+          item.setAttribute("aria-pressed", String(item === button));
+        });
+      });
+    });
+  </script>
+</body>
+</html>
+
+

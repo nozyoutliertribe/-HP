@@ -1,0 +1,167 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NOT TCはジュニア向け硬式テニスチームです。地域最大級の屋外練習環境で、テニスを通じて地域を活性化します。">
+  <title>NOT TC｜体験・相談</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-view-mode="auto">
+  <header class="header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html#top">
+        <img src="not-tc-logo.jpg" alt="">
+        <span>NOT TC</span>
+      </a>
+      <nav class="nav" aria-label="メインナビゲーション">
+        <a href="index.html#top">HOME</a>
+        <a href="schedule.html#schedule">活動案内・料金</a>
+        <a href="tournaments.html#tournaments">大会情報</a>
+        <a href="news.html#news">お知らせ</a>
+        <a href="calendar.html#calendar">カレンダー</a>
+        <a href="faq.html#faq">Q&A</a>
+        <a href="join.html#join">体験・相談</a>
+        <a href="access.html#access">アクセス</a>
+      </nav>
+      <div class="view-switch" role="group" aria-label="サイト表示切替" hidden>
+        <button type="button" data-view-mode="auto" aria-pressed="true">自動</button>
+        <button type="button" data-view-mode="desktop" aria-pressed="false">PC表示</button>
+        <button type="button" data-view-mode="mobile" aria-pressed="false">スマホ表示</button>
+      </div>
+    </div>
+  </header>
+  <main>
+<section class="join" id="join">
+      <div class="container">
+        <h2>NOT TCへの参加・お問い合わせ</h2>
+        <p>クラスの詳細や参加について、お気軽にご連絡ください。</p>
+        <form class="contact-form" action="https://script.google.com/macros/s/AKfycbwH_dewOFYbOlx9Z2yAVPY8Ookyvwf-cbySQFxvOpZuem0QdlleDj2jkDvfi3LZK-Y/exec" method="post" target="_blank">
+          <label>
+            ご用件（必須）
+            <select id="inquiry-topic" name="topic" required>
+              <option value="" selected disabled>選択してください</option>
+              <option value="trial">体験レッスン</option>
+              <option value="rental">レンタルコートの予約・空き状況</option>
+              <option value="team">ジュニアチームについて</option>
+              <option value="other">その他</option>
+            </select>
+          </label>
+          <div class="contact-form-grid">
+            <label>
+              お名前（必須）
+              <input type="text" name="name" autocomplete="name" maxlength="80" required>
+            </label>
+            <label>
+              メールアドレス（必須）
+              <input type="email" name="email" autocomplete="email" maxlength="254" required>
+            </label>
+            <label>
+              電話番号（必須）
+              <input type="tel" name="phone" autocomplete="tel" maxlength="40" required>
+            </label>
+            <label>
+              体験者のお子様のお名前（任意）
+              <input type="text" name="childName" autocomplete="off" maxlength="80">
+            </label>
+            <label>
+              年齢（任意）
+              <input type="text" name="age" placeholder="例：10歳" maxlength="20">
+            </label>
+            <label>
+              学年（任意）
+              <input type="text" name="grade" placeholder="例：小学4年生" maxlength="30">
+            </label>
+            <label>
+              テニス歴（任意）
+              <input type="text" name="tennisHistory" placeholder="例：未経験、3年" maxlength="120">
+            </label>
+          </div>
+          <div class="contact-form-grid">
+            <label>
+              希望日時（第1希望）
+              <input id="preferred-date" type="datetime-local" name="preferredDate">
+            </label>
+            <label>
+              希望日時（第2希望・任意）
+              <input type="datetime-local" name="alternateDate">
+            </label>
+          </div>
+          <p class="contact-form-note">体験レッスン・レンタルコートをご希望の場合は、第1希望日時をご入力ください。レンタルコートは空き状況の確認後に予約確定となります。</p>
+          <p class="contact-form-note">体験レッスンは1週間無料です。同一の方の2回目以降のお申し込みはビジター扱いとなり、各クラスのビジター料金が適用されます。</p>
+          <label>
+            お問い合わせ内容（必須）
+            <textarea name="message" rows="6" maxlength="3000" required></textarea>
+          </label>
+          <div class="contact-form-trap" aria-hidden="true">
+            <label>入力しないでください<input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+          </div>
+          <p class="contact-form-note">入力内容はinformationozy@gmail.comへ送信し、問い合わせ記録としてスプレッドシートに保存します。</p>
+          <button class="button" type="submit">送信する</button>
+        </form>
+        <div class="contact-links">
+          <a class="contact-icon-link phone-link" href="tel:09060946843" aria-label="電話 090-6094-6843 に発信" title="電話 090-6094-6843">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M6.6 3.8 9 3.4l2 4.7-1.7 1.7a14.2 14.2 0 0 0 4.9 4.9l1.7-1.7 4.7 2-.4 2.4a2 2 0 0 1-2 1.7A15.8 15.8 0 0 1 4.9 5.8a2 2 0 0 1 1.7-2Z" fill="#102a43" />
+            </svg>
+          </a>
+          <a class="contact-icon-link" href="mailto:informationozy@gmail.com" aria-label="informationozy@gmail.comにメールを作成" title="メールを作成">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <rect x="2.5" y="4.5" width="19" height="15" rx="2" fill="white" stroke="#dfe5ee" />
+              <path d="M4 6.5 12 12.4 20 6.5" stroke="#EA4335" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M4 7v11" stroke="#4285F4" stroke-width="2.2" stroke-linecap="round" />
+              <path d="M20 7v11" stroke="#34A853" stroke-width="2.2" stroke-linecap="round" />
+              <path d="m4 18 6.5-5" stroke="#FBBC04" stroke-width="2.2" stroke-linecap="round" />
+              <path d="m20 18-6.5-5" stroke="#EA4335" stroke-width="2.2" stroke-linecap="round" />
+            </svg>
+          </a>
+          <a class="instagram-link" href="https://www.instagram.com/tennis_nozy/?hl=ja" target="_blank" rel="noopener noreferrer" aria-label="Instagram @tennis_nozy を開く">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <rect x="3" y="3" width="18" height="18" rx="5" stroke="white" stroke-width="2" />
+              <circle cx="12" cy="12" r="4" stroke="white" stroke-width="2" />
+              <circle cx="18" cy="6" r="1.2" fill="white" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 NOT TC</p>
+    </div>
+  </footer>
+  <script>
+    const viewSwitch = document.querySelector(".view-switch");
+    const viewButtons = viewSwitch.querySelectorAll("button");
+
+    viewSwitch.hidden = false;
+    viewButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        document.body.dataset.viewMode = button.dataset.viewMode;
+        viewButtons.forEach((item) => {
+          item.setAttribute("aria-pressed", String(item === button));
+        });
+      });
+    });
+
+    const inquiryTopic = document.querySelector("#inquiry-topic");
+    const preferredDate = document.querySelector("#preferred-date");
+    if (inquiryTopic && preferredDate) {
+      const requestedTopic = new URLSearchParams(window.location.search).get("topic");
+      if (["trial", "rental", "team", "other"].includes(requestedTopic)) {
+        inquiryTopic.value = requestedTopic;
+      }
+
+      const updatePreferredDateRequirement = () => {
+        preferredDate.required = ["trial", "rental"].includes(inquiryTopic.value);
+      };
+
+      inquiryTopic.addEventListener("change", updatePreferredDateRequirement);
+      updatePreferredDateRequirement();
+    }
+  </script>
+</body>
+</html>
+
+
